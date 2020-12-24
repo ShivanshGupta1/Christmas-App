@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toys</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--Import Google Icon Font-->
+
+  <link rel="stylesheet" href="materialize.min.css">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
+</head>
+
+<body onload="
+M.toast({html: 'Write a wish for someone! And make their day!'})">
+
+<nav style="height: 125px;">
+  <div class="nav-wrapper">
+
+    <a href="http://localhost:3000" class="brand-logo"><img src="Logo.png" style="border-radius:75%; width: 100px; height: 100px; margin-top: 10px; margin-left: 15px;" alt="" style="text-align: center;"></a>
+    <h3  style="margin-left: 200px;">Chrismasic</h3>
+   <a style="margin-left: 300px; text-align: center; font-size: 30px;" href="" class="typewrite" data-period="2000" data-type='[ "Merry Christmas Everyone", "Hope you are having a great day!", "Enjoy the new year, spend time with your loved ones", "See You On New Year - Shivansh" ]'></a>
+      <ul class="right hide-on-med-and-down">
+      <li><a href="http://localhost:3000/wishes"><i class="material-icons left">search</i>Wishes From Others</a></li>
+      <li><a href="http://localhost:3000/create-a-wish"><i class="material-icons right">view_module</i>Write A Wish</a></li>
+    </ul>
+  </div>
+</nav>
+
+  <br>
+
+  <a style="text-align: center; margin-left: 600px;" href="#!" id="sign-in"
+    class="btn waves-effect waves-yellow scale-transition">Write A Wish</a>
+
+  <div class="z-depth-5" class="row">
+    <div class="column" style="margin-left:500px;" >
+      <div class="row waves-light scale-transition scale-out ">
+          <div class="col">
+            <div class="card">
+              <div class="card-image">
+                <img src="https://images.indianexpress.com/2019/12/Merry-Christmas-Live_1200.jpg">
+               
+                <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                
+              </div>
+              
+              <div class="card-content" style="height: 350px;">
+                <span class="card-title" ><strong style="margin-top: 100px;"><span style="color: red;">Write</span> A <span style="color: red;">Wish</span></strong></span>
+               <form action="/create-a-wish" method="POST">
+                <div class="input-field col s6">
+                  <i class="material-icons prefix">account_circle</i>
+                  <input id="icon_prefix" type="text" class="validate" name="Name">
+                  <label for="icon_prefix">First Name</label>
+                </div>
+                <div class="input-field col s6">
+                  <i class="material-icons prefix">phone</i>
+                  <input id="icon_telephone" type="tel" class="validate" name="Number">
+                  <label for="icon_telephone">Number</label>
+                </div>
+                <br>
+                <div class="input-field col s12">
+                  <textarea id="textarea1" class="materialize-textarea" name="Wish"></textarea>
+                  <label for="textarea1">Wish</label>
+                </div>
+                <button type="submit">Send</button>
+              </form>
+              </div>
+            </div>
+          </div>
+        </div>
+                  
+      </div>
+
+    </div>
+    
+  </div>
+  
+
+
+     <!-- FOOTER -->
+     <footer  id="footer" style="background-color:#ffab40; margin-top: 650px;" class="page-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <h5 class="white-text">Huge Basket</h5>
+              <p class="grey-text text-lighten-4">Huge Basket is a small initiative to help farmers and people who are in
+                need of resources. We also help people who need gifts and sell other stuff to help too. </p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+              <h5 class="white-text">Contact Us</h5>
+              <p class="grey-text text-lighten-4">For any help, please feel free to drop us a message or use any of the link
+                below!</p>
+              <ul>
+                <li><a class="grey-text text-lighten-3"
+                    href="randomemail@hugebasket.in"><u>randomemail@hugebasket.in</u></a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">+91 882935810</a></li>
+                <li><a class="grey-text text-lighten-3" href="https://www.amazon.com/"><u>Amazon Our Partner</u></a></li>
+                <li><a class="grey-text text-lighten-3" href="https://www.flipkart.com"><u>Flipcart Our Partner</u></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container">
+            No © 2020 Huge Basket
+            <a class="grey-text text-lighten-4 right" href="#!"></a>
+          </div>
+        </div>
+      </footer>
+    
+      <ul style="text-align: center; margin-top: 10px;" class="pagination">
+        <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+        <li class="active"><a href="http://localhost:4000">1</a></li>
+        <li class="waves-effect"><a href="http://localhost:4000/food">2</a></li>
+        <li class="waves-effect"><a href="http://localhost:4000/toys">3</a></li>
+        <li class="waves-effect"><a href="http://localhost:4000/cart">4</a></li>
+        <li class="waves-effect"><a href="https://genderequality.netlify.app/">5</a></li>
+        <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+      </ul>
+    
+
+  <style type="text/css">
+    .m20_0 {
+      margin: 20px 0px;
+    }
+  </style>
+  <div class="m20_0">
+    <!-- Element Showed -->
+    <div class="fixed-action-btn waves-orange
+      " style="bottom: 45px; right: 24px; ">
+      <a id="menu" onclick="$('.tap-target').tapTarget('open')" class="btn btn-floating btn-large waves-orange
+            "><i class="material-icons">menu</i></a>
+    </div>
+
+    <!-- Start Tap Target Structure -->
+    <div style="background-color: #00ff87;" class="tap-target " data-activates="menu">
+      <div class="tap-target-content white-text">
+        <h5 style="text-align: center;">Chrismasic</h5>
+        <p>This initiavtive is made by a 12 year old kid (me), I created this website too! This initiative is for families to come together once to celebrate one of the most joyful festivals in history! It will help children and families, write  wishes for one and other and have fun! Cheeck out my other websites at - <a href="https://campk12.com/project/ShivanshGupta/huge-basket">Huge Basket</a> and <a href="https://campk12.com/project/ShivanshGupta/gender-equality-website">Gender Equality</a>. </p>
+      </div>
+    </div>
+    <!-- End Tap Target Structure -->
+  </div>
+  </div>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Create three equal columns that floats next to each other */
+    .column {
+      float: left;
+      width: 33.33%;
+      padding: 10px;
+      height: 300px;
+      /* Should be removed. Only for demonstration */
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  </style>
+
+</body>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+  $('#sign-in').click(function () {
+    $('#sign-in').addClass('scale-out');
+    $('#sign-up').addClass('scale-out');
+    $('.row').removeClass('scale-out').addClass('scale-in');
+  })
+</script>
+
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="materialize.js"></script>
+<script src="init.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!--Import materialize.js-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+</html>

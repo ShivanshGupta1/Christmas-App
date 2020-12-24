@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Parallax Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!--Import Google Icon Font-->
+ 
+  <link rel="stylesheet" href="materialize.min.css">
+  <style>
+    .brand-logo{
+      transition: transform 2s;
+    }
+    .brand-logo:hover{
+      transform: rotateY(180deg); 
+    }   
+    @keyframes move {
+  0%   { left:0px; transform: rotate(20deg);}
+  50%  { left:1000px; transform: rotate(-20deg);}
+  100% {left:0px;transform: rotate(20deg);}
+
+}
+
+@keyframes drive {
+  0%   { left:-200px; ;}
+  100% {left:1500px;}
+
+}
+@keyframes fall {
+  0%   { top:0px; ; z-index: 2;}
+  100% {top:300px; display: none;}
+
+}
+.santaImage-active{
+ 
+  animation-name: move;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  position: relative;
+
+
+
+ 
+}
+.car-active{
+  animation-name: drive;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  position: relative;
+}
+.gifts-active{
+  animation-name: fall;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  position: relative;
+}
+
+
+
+    
+  </style>
+</head>
+<body style="background-image: url(https://media1.popsugar-assets.com/files/thumbor/KrKoqfjTSfxbHbkGfIgzWp_BGFE/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2020/12/02/684/n/1922507/64fb06e5d2c7fb00_christmas-14/i/Christmas-Lights-Zoom-Background.jpg); background-attachment: fixed; background-repeat: no-repeat; background-size: cover;"> 
+
+  <nav style="height: 125px;">
+    <div class="nav-wrapper">
+
+      <a href="http://localhost:3000" class="brand-logo"><img src="Logo.png" style="border-radius:75%; width: 100px; height: 100px; margin-top: 10px; margin-left: 15px;" alt="" style="text-align: center;"></a>
+      <h3  style="margin-left: 200px;">Chrismasic</h3>
+     <a style="margin-left: 300px; text-align: center; font-size: 30px;" href="" class="typewrite" data-period="2000" data-type='[ "Merry Christmas Everyone", "Hope you are having a great day!", "Enjoy the new year, spend time with your loved ones", "See You On New Year - Shivansh" ]'></a>
+        <ul class="right hide-on-med-and-down">
+        <li><a href="http://localhost:3000/wishes"><i class="material-icons left">search</i>Wishes From Others</a></li>
+        <li><a href="http://localhost:3000/create-a-wish"><i class="material-icons right">view_module</i>Write A Wish</a></li>
+      </ul>
+    </div>
+  </nav>
+  <br>
+  <img  class="santaImage" style="margin-top: 200px; width: 300px; height: 300px;" src="https://images.vexels.com/media/users/3/146508/isolated/preview/0ece523622c2e871ef6cd199a5fc35a3-santa-pointing-cartoon-by-vexels.png" alt="">
+  <button id="button" onclick="hide()" style="text-align: center; margin-left: 370px;">Click Me</button>
+  <h3 style="text-align: center;">Sing With Me!</h3>
+  <h4 style="text-align: center;" id="1"></h4>
+  <h4 style="text-align: center;" id="2"></h4>
+  <h4 style="text-align: center;"  id="3"></h4>
+  <h4 style="text-align: center;" id="4"></h4>
+  <br>
+  <img class="gifts" style="width: 100px; height: 100px; margin-left: 125px;" src="https://www.clker.com/cliparts/u/F/v/2/t/9/gift-box-md.png" alt="">
+  <img  class="gifts" style="width: 100px; height: 100px; margin-left: 325px;" src="https://www.clker.com/cliparts/u/F/v/2/t/9/gift-box-md.png" alt="">
+  <img  class="gifts" style="width: 100px; height: 100px; margin-left: 425px;" src="https://www.clker.com/cliparts/u/F/v/2/t/9/gift-box-md.png" alt="">
+  <br>
+  <img src="https://webstockreview.net/images/clipart-houses-row-6.png" style="top: 200px; margin-bottom: 0px;position: relative; width: 700px;" alt="">
+  <img src="https://webstockreview.net/images/clipart-houses-row-6.png" style="top: 200px; margin-bottom: 0px;position: relative; width: 700px;" alt="">
+  <br>
+  <div style="margin-bottom: 300px;">
+
+    <img class="car" src="https://www.clker.com/cliparts/q/0/m/g/P/c/red-sports-car-top-view.svg" style="position: absolute; z-index: 1; width: 200px; height: 100px; margin-top: 210px;" alt="">
+  <img style="margin-top: 200px; display: inline; width: 400px; height:145px; position: relative; margin-left: 30px;" src="https://thumbs.dreamstime.com/t/highway-traffic-concept-top-view-cars-asphalt-road-vector-flat-illustration-96015654.jpg" alt="">
+  <img style="margin-top: 200px;  display: inline; width: 500px; position: relative;"   src="https://thumbs.dreamstime.com/t/highway-traffic-concept-top-view-cars-asphalt-road-vector-flat-illustration-96015654.jpg" alt="">
+  <img style="margin-top: 200px;display: inline; width: 500px; position: relative;"  src="https://thumbs.dreamstime.com/t/highway-traffic-concept-top-view-cars-asphalt-road-vector-flat-illustration-96015654.jpg" alt="">
+  </div>
+  <audio id="music" src="Jingle Bells.mp3"></audio>
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="materialize.js"></script>
+  <script src="init.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <!--Import materialize.js-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script>
+  $("#button").click(function() {
+  $('.santaImage').toggleClass('santaImage-active');
+  $('.car').toggleClass('car-active');
+  $('.gifts').toggleClass('gifts-active');
+});
+var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+    };
+function hide(){
+  let button = document.getElementById("button")
+  button.style.display = "none"
+
+  document.getElementById("music").play()
+  let first = document.getElementById("1")
+  let second = document.getElementById("2")
+  let third = document.getElementById("3")
+  let fourth = document.getElementById("4")
+  
+  setTimeout(()=>{
+first.innerHTML = "Dashing through the snow"
+  },10000)
+  setTimeout(()=>{
+second.innerHTML = "In a one horse open sleigh"
+  },12000)
+  setTimeout(()=>{
+third.innerHTML = "O'er the fields we go"
+  },14000)
+  setTimeout(()=>{
+fourth.innerHTML = "Laughing all the way"
+  },17000)
+  setTimeout(()=>{
+first.innerHTML = "Bells on bob tails ring"
+  },19000)
+  setTimeout(()=>{
+second.innerHTML = "Making spirits bright"
+  },23000)
+  setTimeout(()=>{
+third.innerHTML = "What fun it is to laugh and sing"
+  },25000)
+  setTimeout(()=>{
+fourth.innerHTML = "A sleighing song tonight"
+  },27000)
+  setTimeout(()=>{
+first.innerHTML = "Oh, jingle bells, jingle bells"
+  },29000)
+  setTimeout(()=>{
+second.innerHTML = "Jingle all the way"
+  },32000)
+  setTimeout(()=>{
+third.innerHTML = "Oh, what fun it is to ride"
+  },34000)
+  setTimeout(()=>{
+fourth.innerHTML = "In a one horse open sleigh"
+  },36000)
+  
+  
+ 
+}
+
+
+
+  </script>
+  </body>
+</html>
